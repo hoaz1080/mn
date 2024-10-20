@@ -20,7 +20,7 @@ bot = Bot(token=bot_token)
 def check_balance(address):
     try:
         balance = w3.eth.get_balance(address)
-        return w3.fromwei(balance, 'ether')
+        return w3.from_wei(balance, 'ether')
     except Exception as e:
         print(f"Error checking balance for address {address}: {e}")
         return None
